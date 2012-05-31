@@ -42,12 +42,14 @@ public class AppotaPaymentSampleActivity extends Activity implements OnClickList
 	private TopupChecker checker;
 	private TopupReceiver topupReceiver;
 	private boolean isRequireUser = true;
+	private Button btnCat;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.topup_options);
+		Toast.makeText(this, "qwertyuiopasdfghjklzxcvbnm0123456789", Toast.LENGTH_LONG).show();
 		findViews();
 		topupReceiver = new TopupReceiver();
 		IntentFilter intentFilter = new IntentFilter();
@@ -57,6 +59,7 @@ public class AppotaPaymentSampleActivity extends Activity implements OnClickList
 		btnPaypal.setOnClickListener(this);
 		btnPhoneCard.setOnClickListener(this);
 		btnSMS.setOnClickListener(this);
+		btnCat.setOnClickListener(this);
 		client = new AppotaClient();
 		
 		//create a sharedPreference to store access token
@@ -72,6 +75,7 @@ public class AppotaPaymentSampleActivity extends Activity implements OnClickList
 		btnPaypal = (Button) findViewById(R.id.btn_paypal);
 		btnPhoneCard = (Button) findViewById(R.id.btn_carrier_card);
 		btnSMS = (Button) findViewById(R.id.btn_sms);
+		btnCat = (Button) findViewById(R.id.btn_category);
 	}
 	
 	public void onClick(View v) {
@@ -90,10 +94,14 @@ public class AppotaPaymentSampleActivity extends Activity implements OnClickList
 		case R.id.btn_paypal:
 			paypalPayment(intent);
 			break;
+		case R.id.btn_category:
+			//new AppotaClient().getCategories("https://api.appota.com/content/categories", accessTokenStr, "1");
+			break;
 		default:
 			break;
 		}
 	}
+
 
 	
 	//topup by phone card

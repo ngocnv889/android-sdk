@@ -7,8 +7,21 @@ package com.appota.test;
 public class Constants {
 	
 	// enter your clientKey, clientSecret here (the two keys that you receive after register app)
-	public static final String CLIENT_KEY = "";	
-	public static final String CLIENT_SECRET = "";
+	public static final String CLIENT_KEY = "f6bcef37aed92ba35d8a3a26875b594704fc4780d";	
+	public static final String CLIENT_SECRET = "c0d8541f06d17e3d9062e79436a5ebea04fc4780d";
+	
+	
+	/**
+	 * Define endpoint APIs:
+	 * topup APIs: allow user to purchase TYM 
+	 * 
+	 */
+	public static final String SMS_ENDPOINT = "https://api.appota.com/payment/topup_sms";
+	public static final String CHECK_TOPUP_ENDPOINT = "https://api.appota.com/payment/topup";
+	public static final String CARD_ENDPOINT = "https://api.appota.com/payment/topup_card";
+	public static final String PAYPAL_ENDPOINT = "https://api.appota.com/payment/topup_paypal";
+	public static final String BANK_ENDPOINT = "https://api.appota.com/payment/topup_bank";
+	
 	
 	/**
 	 * Android preference to save AccessToken
@@ -29,19 +42,6 @@ public class Constants {
 	public static final String USER_PAYMENT_SCOPE = "user.payment";
 	public static final String INAPP_SCOPE = "inapp";
 	
-
-	/**
-	 * Define endpoint APIs:
-	 * topup APIs: allow user to purchase TYM 
-	 * 
-	 */
-	public static final String SMS_ENDPOINT = "https://api.appota.com/payment/topup_sms";
-	public static final String CHECK_TOPUP_ENDPOINT = "https://api.appota.com/payment/topup";
-	public static final String CARD_ENDPOINT = "https://api.appota.com/payment/topup_card";
-	public static final String PAYPAL_ENDPOINT = "https://api.appota.com/payment/topup_paypal";
-	public static final String BANK_ENDPOINT = "https://api.appota.com/payment/topup_bank";
-
-
 	/**
 	 * In-app purchase endPoint:
 	 * Directly purchase cash to your app

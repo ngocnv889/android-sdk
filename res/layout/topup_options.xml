@@ -37,5 +37,12 @@
         android:id="@+id/btn_paypal"
         android:text="@string/paypal"
         android:layout_gravity="center"/>
+    
+    <Button 
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_category"
+        android:text="Category"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
