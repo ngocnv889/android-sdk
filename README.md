@@ -11,13 +11,6 @@ Appota Android SDK là một phần mềm nguồn mở giúp cho nhà phát tri�
 Appota Android SDK được phân phối theo giấy phép Apache Licence, Version 2.0 (http://www.apache.org/licenses/LICENSE-2.0.html)
 
 
-Sử dụng 
--------
-Thay thế các thông tin cấu hình dành riêng cho ứng dụng của bạn trong file  src/com/appota/test/Constants.java
-
-Để sử dụng các APIs vui lòng truy cập địa chỉ: https://developers.appota.com/docs
-
-
 Báo lỗi và đề xuất
 ==================
 [Bugs](https://developers.appota.com/bugs)
