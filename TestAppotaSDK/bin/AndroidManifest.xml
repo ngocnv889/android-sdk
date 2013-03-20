@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.testappotasdk"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.testappotasdk.MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="myapphost"
+                    android:scheme="test"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.appota.asdk.CardPaymentActivity"
+            android:configChanges="orientation|screenSize|screenLayout" >
+        </activity>
+        <activity
+            android:name="com.appota.asdk.BankPaymentActivity"
+            android:configChanges="orientation|screenSize|screenLayout" >
+        </activity>
+        <activity
+            android:name="com.appota.asdk.PaypalActivity"
+            android:configChanges="orientation|screenSize|screenLayout"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name="com.paypal.android.MEP.PayPalActivity"
+            android:configChanges="keyboardHidden|orientation"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+        </activity>
+
+        <meta-data
+            android:name="client_key"
+            android:value="8e2ad93d8e88c7221d51dbd34e01b25a05020856a" />
+        <meta-data
+            android:name="client_secret"
+            android:value="f70038b2cdcef2bac7995e7067a33ac005020856a" />
+        <meta-data
+            android:name="enable_logging"
+            android:value="true" />
+    </application>
+
+</manifest>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppotaSDK</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="loading">Loading&#8230;</string>
+    <string name="error_nega1">Interrupt exception. [Error code: %d]</string>
+    <string name="error_nega2">Acess token is invalid. [Error code: %d]</string>
+    <string name="error_nega3">Unkownn rror. [Error code: %d]</string>
+    <string name="error_nega4">Connection timeout. Please try again [Error code: %d]</string>
+    <string name="error_code1">Invalid parameters. [Error code: %d]</string>
+    <string name="error_code91">Server is now busy. [Error code: %d]</string>
+    <string name="error_code3">User or app forbidden or not exists. [Error code: %d]</string>
+    <string name="error_code10">This api currently only available in Vietnam. [Error code: %d]</string>
+    <string name="error_code7">Transaction is not exists. [Error code: %d]</string>
+    <string name="error_code8">This application is forbidden. [Error code: %d]</string>
+	<string name="error_code9">Transaction is not success. [Error code: %d]</string>
+	<string name="error_code11">The input amount is not enough. [Error code: %d]</string>
+	<string name="error_code19">The card is not exists or used. [Error code: %d]</string>
+	<string name="transaction_request_sent">Transaction request is submitted. We will response right now</string>
+	
+	<string name="card_type">Card type</string>
+	<string name="card_value">Card value</string>
+	<string name="input_card_serial">Input card serial</string>
+    <string name="input_card_code">Input card code</string>
+    <string name="confirm">Confirm</string>
+    <string name="card_code_blank">Please enter card code</string>
+    <string name="card_serial_blank">Please enter card serial</string>
+    <string name="confirm_payment">Are you sure?</string>
+    <string name="paypal_activity_title">Press the button below to continue</string>
+</resources>

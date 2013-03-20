@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+    <array name="card_type">
+        <item>Vinaphone</item>
+        <item>Mobifone</item>
+        <item>Viettel</item>
+    </array>
+    
+    <array name="bank_topup_value">
+        <item>50.000 VNĐ -> 479 green TYM</item>
+        <item>100.000 VNĐ -> 974 green TYM</item>
+        <item>200.000 VNĐ -> 1.964 green TYM</item>
+        <item>500.000 VNĐ -> 4.934 green TYM</item>
+        <item>1000.000 VNĐ -> 9.884 green TYM</item>
+        <item>2000.000 VNĐ -> 19.784 green TYM</item>
+    </array>
+    
+    <array name="bank_value">
+        <item>50.000 VNĐ</item>
+        <item>100.000 VNĐ</item>
+        <item>200.000 VNĐ</item>
+        <item>500.000 VNĐ</item>
+        <item>1000.000 VNĐ</item>
+        <item>2000.000 VNĐ</item>
+    </array>
+    
+    <array name="paypal_topup_value">
+        <item>$5 -> 850 green TYM</item>
+        <item>$10 -> 1.700 green TYM</item>
+        <item>$50 -> 8.500 green TYM</item>
+    </array>
+    
+    <array name="paypal_value">
+        <item>$5</item>
+        <item>$10</item>
+        <item>$50</item>
+    </array>
+</resources>
