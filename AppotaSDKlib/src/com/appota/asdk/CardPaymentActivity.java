@@ -54,10 +54,31 @@ public class CardPaymentActivity extends Activity{
 			@Override
 			public void onClick(DialogInterface dialog, int which) {
 				// TODO Auto-generated method stub
+				String vendorStr = "";
+				switch (vendor.getSelectedItemPosition()) {
+				case 0:
+					vendorStr = "vinaphone";
+					break;
+				case 1:
+					vendorStr = "mobifone";
+					break;
+				case 2:
+					vendorStr = "viettel";
+					break;
+				case 3:
+					vendorStr = "fpt";
+					break;
+				case 4:
+					vendorStr = "vtc";
+					break;
+				case 5:
+					vendorStr = "mega";
+					break;
+				}
 				switch (which) {
 				case DialogInterface.BUTTON_POSITIVE:
 					if(bundle.getInt(Constant.PAYMENT_TYPE) == Constant.PAYMENT_TYPE_INAPP){
-						InAppCardTask task = new InAppCardTask(CardPaymentActivity.this, bundle.getString(Constant.ACCESS_TOKEN_KEY), editCardSerial.getText().toString(), editCardCode.getText().toString(), vendor.getSelectedItem().toString(), bundle.getString(Constant.NOTICE_URL_KEY), bundle.getString(Constant.STATE_KEY), bundle.getString(Constant.TARGET_KEY));
+						InAppCardTask task = new InAppCardTask(CardPaymentActivity.this, bundle.getString(Constant.ACCESS_TOKEN_KEY), editCardSerial.getText().toString(), editCardCode.getText().toString(), vendorStr, bundle.getString(Constant.NOTICE_URL_KEY), bundle.getString(Constant.STATE_KEY), bundle.getString(Constant.TARGET_KEY));
 						task.setCardPaymenrHandler(new CardPaymentHandler() {
 							
 							@Override
@@ -89,7 +110,7 @@ public class CardPaymentActivity extends Activity{
 				        	task.execute();
 				        }
 					} else if(bundle.getInt(Constant.PAYMENT_TYPE) == Constant.PAYMENT_TYPE_TOPUP){
-						TopupCardTask task = new TopupCardTask(CardPaymentActivity.this, bundle.getString(Constant.ACCESS_TOKEN_KEY), editCardSerial.getText().toString(), editCardCode.getText().toString(), vendor.getSelectedItem().toString(), bundle.getString(Constant.NOTICE_URL_KEY));
+						TopupCardTask task = new TopupCardTask(CardPaymentActivity.this, bundle.getString(Constant.ACCESS_TOKEN_KEY), editCardSerial.getText().toString(), editCardCode.getText().toString(), vendorStr, bundle.getString(Constant.NOTICE_URL_KEY));
 						task.setCardPaymenrHandler(new CardPaymentHandler() {
 							
 							@Override

@@ -28,6 +28,7 @@ import com.appota.asdk.handler.GetAccessTokenHandler;
 import com.appota.asdk.handler.PaypalPaymentHandler;
 import com.appota.asdk.handler.SMSPaymentHandler;
 import com.appota.asdk.handler.TransactionStatusHandler;
+import com.appota.asdk.handler.UserInfoHandler;
 import com.appota.asdk.model.BankPayment;
 import com.appota.asdk.model.PaypalPayment;
 import com.appota.asdk.model.SMSPayment;
@@ -35,6 +36,7 @@ import com.appota.asdk.task.CheckInAppTransactionTask;
 import com.appota.asdk.task.CheckTopupTask;
 import com.appota.asdk.task.GetAccessTokenTask;
 import com.appota.asdk.task.GetNonUserAccessTokenTask;
+import com.appota.asdk.task.GetUserInfoTask;
 import com.appota.asdk.task.InAppBankTask;
 import com.appota.asdk.task.InAppPaypalTask;
 import com.appota.asdk.task.InAppSMSTask;
@@ -99,6 +101,17 @@ public class Appota {
 	public void getNonUserAccessToken(List<String> scopes, GetAccessTokenHandler handler){
 		GetNonUserAccessTokenTask task = new GetNonUserAccessTokenTask(context, clientKey, clientSecret, scopes, "en");
 		task.setRequestTokenHandler(handler);
+		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
+        	task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
+        }
+        else {
+        	task.execute();
+        }
+	}
+	
+	public void getUserInfo(String accessToken, UserInfoHandler handler){
+		GetUserInfoTask task = new GetUserInfoTask(context, accessToken);
+		task.setUserInfoHandler(handler);
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
         	task.executeOnExecutor(AsyncTask.THREAD_POOL_EXECUTOR);
         }
