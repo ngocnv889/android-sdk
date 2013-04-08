@@ -58,10 +58,10 @@
 
         <meta-data
             android:name="client_key"
-            android:value="YOUR_CLIENT_KEY" />
+            android:value="8e2ad93d8e88c7221d51dbd34e01b25a05020856a" />
         <meta-data
             android:name="client_secret"
-            android:value="YOUR_CLIENT_SECRET" />
+            android:value="f70038b2cdcef2bac7995e7067a33ac005020856a" />
         <meta-data
             android:name="enable_logging"
             android:value="true" />

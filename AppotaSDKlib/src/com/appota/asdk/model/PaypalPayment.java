@@ -17,6 +17,11 @@ public class PaypalPayment implements Serializable {
 
 	public PaypalPayment() {
 	}
+	
+	public PaypalPayment(double amount, int tym){
+		this.amount = amount;
+		this.tym = tym;
+	}
 
 	public PaypalPayment(int errorCode) {
 		this.errorCode = errorCode;

@@ -918,7 +918,7 @@ public class AppotaFactory {
     				String amount = dataObj.getString("tym");
     				String msg = dataObj.getString("message");
     				String time = dataObj.getString("time");
-    				int id = dataObj.getInt("topup_id");
+    				String id = dataObj.getString("topup_id");
     				result.setStatus(isSuccess);
     				result.setMessage(msg);
     				result.setAmount(amount);
@@ -1359,7 +1359,7 @@ public class AppotaFactory {
     				String msg = dataObj.getString("message");
     				String type = dataObj.getString("type");
     				String time = dataObj.getString("time");
-    				int id = dataObj.getInt("inapp_id");
+    				String id = dataObj.getString("inapp_id");
     				String state = dataObj.getString("state");
     				String target = dataObj.getString("target");
     				String currency = dataObj.getString("currency");
