@@ -8,4 +8,9 @@
     <color name="confirm">#FF8800</color>
     <color name="info">#669900</color>
     <color name="blue_transparent">#888adcfb</color>
+    <color name="gray">#AAAAAA</color>
+    <color name="blue">#009</color>
+     <color name="comic_indicator">#33b5e5</color>
+     <color name="cache_colorhint">#00000000</color>
+     <color name="app_indicator">#99cc00</color>
 </resources>

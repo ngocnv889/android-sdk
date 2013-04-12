@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/dialog_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="@color/comic_indicator"
+        android:textSize="22sp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@color/comic_indicator" />
+
+    <com.appota.asdk.core.HorizontalListView
+        android:id="@+id/sms_list"
+        android:layout_width="wrap_content"
+        android:layout_height="280dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="10dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:contentDescription="@string/action_settings"
+        android:src="@color/comic_indicator" />
+
+    <Button
+        android:id="@+id/btn_close_dialog"
+        android:layout_width="match_parent"
+        android:text="@string/cancel"
+        android:textColor="@color/comic_indicator"
+        android:background="@drawable/button_click"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

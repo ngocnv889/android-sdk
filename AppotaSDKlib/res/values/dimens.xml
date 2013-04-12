@@ -1,7 +1,59 @@
+<!--
+  Copyright 2011 The Android Open Source Project
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+
 <resources>
+    <dimen name="checkmark_area">40dp</dimen>
+	<dimen name="text_dimen">15sp</dimen>
+    <dimen name="slidingmenu_offset">60dp</dimen>
+    <dimen name="list_padding">10dp</dimen>
+    <dimen name="shadow_width">15dp</dimen>
 
-    <!-- Default screen margins, per the Android Design guidelines. -->
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
+    <integer name="num_cols">1</integer>
+    <dimen name="staggerd_margin">5dp</dimen>
 
+    <dimen name="tab_height">30dp</dimen>
+    <dimen name="tab_padding">10dp</dimen>
+    <dimen name="text_small">14sp</dimen>
+    <dimen name="text_default">17sp</dimen> 
+    <dimen name="list_item_height">30dp</dimen> 
+    
+    <dimen name="margin_parent">8dp</dimen>
+    <dimen name="margin_component">4dp</dimen>
+    <dimen name="cicle_flow_radius">3dp</dimen>
+    <dimen name="view_pager_title_text_size">13sp</dimen>
+    <dimen name="tab_title_text_size">16sp</dimen>
+    <dimen name="dummy_text_size">14sp</dimen>
+    <dimen name="icon_size">75dp</dimen>
+    <dimen name="download_icon_size">48dp</dimen>
+    <dimen name="collection_icon_size">100dp</dimen>
+    <dimen name="divider_height">4dp</dimen>
+    <dimen name="tym_size">16dp</dimen>
+    <dimen name="menu_tym_size">24dp</dimen>
+    <dimen name="icon_margin">2dp</dimen>
+    <dimen name="tab_footer_height">2dp</dimen>
+    <dimen name="tab_indicator_height">4dp</dimen>
+    <dimen name="nav_icon_size">32dp</dimen>
+    <dimen name="desc_width">280dp</dimen>
+    <dimen name="related_width">220dp</dimen>
+    <dimen name="details_padding_topbot">16dp</dimen>
+    <dimen name="related_icon_size">60dp</dimen>
+    <dimen name="rating_size">13dp</dimen>
+    <dimen name="coll_name_margin">12dp</dimen>
+    <dimen name="coll_head_margin">25dp</dimen>
+    <dimen name="coll_text_size">22sp</dimen>
+    <dimen name="launch_button_height">32dp</dimen>
+    <dimen name="sms_text_margin">20dp</dimen>
 </resources>

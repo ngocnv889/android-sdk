@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_sms_tym_xml">
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_sms"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:singleLine="true"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:textColor="@color/app_indicator"
+        android:textSize="@dimen/coll_text_size"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="@dimen/sms_text_margin"
+        android:layout_marginRight="@dimen/sms_text_margin"
+        android:textIsSelectable="false"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txt_green_tym"
+        android:layout_below="@+id/txt_sms"
+        android:layout_centerHorizontal="true"
+        android:text="@string/green_tym"
+        android:ellipsize="end"
+        android:textStyle="bold"
+        android:singleLine="true"
+        android:textColor="@color/app_indicator"
+        android:textSize="@dimen/coll_text_size"
+        android:layout_marginTop="@dimen/margin_parent"
+        android:layout_marginLeft="@dimen/sms_text_margin"
+        android:layout_marginRight="@dimen/sms_text_margin"
+        android:textIsSelectable="false"/>
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txt_green_tym"
+        android:id="@+id/dummy_tym"
+        android:src="@drawable/tym_green"
+        android:layout_marginTop="@dimen/coll_head_margin"
+        android:layout_marginBottom="@dimen/coll_head_margin"
+        android:contentDescription="@string/action_settings"
+        android:layout_centerHorizontal="true"/>
+    
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_sms_price"
+        android:layout_centerHorizontal="true"
+        android:textIsSelectable="false"
+        android:padding="@dimen/tab_padding"
+        android:id="@+id/sms_tym_price"
+        android:textColor="@color/app_indicator"
+        android:textSize="@dimen/tab_title_text_size"
+        android:textStyle="bold"
+        android:layout_below="@+id/dummy_tym"
+        android:layout_margin="@dimen/coll_name_margin"/>
+
+</RelativeLayout>

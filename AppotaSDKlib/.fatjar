@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Apr 12 09:49:39 ICT 2013
+onejar.license.required=true
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=false
+jarname=AppotaSDK.jar
+manifest.mergeall=true
+manifest.mainclass=
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=
+includes=

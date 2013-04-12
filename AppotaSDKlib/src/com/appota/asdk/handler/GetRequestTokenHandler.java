@@ -5,5 +5,4 @@ public interface GetRequestTokenHandler {
 
 	public abstract void onGetRequestTokenSuccess(String requestToken);
 	public abstract void onGetRequestTokenError(int errorCode);
-	public abstract void onGetRequestTokenException(int exeptionCode);
 }

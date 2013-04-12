@@ -27,14 +27,18 @@ public class Constant {
 	public static final int TOPUP_BANK_REQUEST_CODE = 103;
 	public static final int IN_APP_PAYPAL_REQUEST_CODE = 104;
 	public static final int TOPUP_PAYPAL_REQUEST_CODE = 105;
+	public static final int REQUEST_TOKEN_REQUEST_CODE = 106;
 	public static final int PAYMENT_TYPE_INAPP = 1;
 	public static final int PAYMENT_TYPE_TOPUP = 0;
 	public static final String PAYMENT_TYPE = "payment_type";
 	public static final String NOTICE_URL_KEY = "notice_url";
 	public static final String ACCESS_TOKEN_KEY = "access_token_";
+	public static final String ACCESS_TOKEN = "access_token_obj";
 	public static final String TARGET_KEY = "target_";
 	public static final String SMART_LINK_URL_KEY = "smartlink_url";
 	public static final String PAYPAL_DATA = "paypal_data";
+	
+	public static final String REDIRECT_URI_KEY = "redirect_uri";
 	
 	public static final String DEFAULT_REDIRECT_URI = "http://localhost";
 	public static final String GRANT_TYPE = "authorization_code";
@@ -51,6 +55,8 @@ public class Constant {
 	public static final String USER_CHARGE_SCOPE = "user.charge";
 	public static final String USER_PAYMENT_SCOPE = "user.payment";
 	public static final String INAPP_SCOPE = "inapp";
+	
+	public static final String REQUEST_TOKEN_URL_KEY = "request_token_url";
 	
 	public static final String USER_INFO_ENDPOINT = "https://api.appota.com/user/detail?access_token=";
 	public static final String NON_USER_REQUEST_TOKEN_ENDPOINT = "https://id.appota.com/app/request_token?";
@@ -77,4 +83,5 @@ public class Constant {
 	public static final String CHECK_BOUGHT_ITEM_ENDPOINT = "https://api.appota.com/item/is_bought?access_token=";
 	public static final String BUY_INAPP_ITEM_ENDPOINT = "https://api.appota.com/item/buy?access_token=";
 	public static final String USER_BOUGHT_LIST_ENDPOINT = "https://api.appota.com/item/bought?access_token=";
+	public static final int SMS_REQUEST_CODE = 1;
 }

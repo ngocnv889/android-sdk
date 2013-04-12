@@ -1,73 +1,110 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity"
-    android:orientation="vertical">
+    android:layout_height="match_parent" >
 
-    <Button 
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GetNonUserAccessToken"
-        android:id="@+id/non_user_access_token"
-        android:onClick="getNonUserAccessToken"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GetAccessToken"
-        android:id="@+id/get_access_token"
-        android:onClick="getAccessToken"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="InAppSMS"
-        android:id="@+id/in_app_sms"
-        android:onClick="inAppSMS"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TopupSMS"
-        android:id="@+id/topup_sms"
-        android:onClick="topupSMS"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="InAppCard"
-        android:id="@+id/inapp_card"
-        android:onClick="inAppCard"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TopupCard"
-        android:id="@+id/topup_card"
-        android:onClick="topupCard"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="InAppBank"
-        android:id="@+id/inapp_bank"
-        android:onClick="inAppBank"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TopupBank"
-        android:id="@+id/topup_bank"
-        android:onClick="topupBank"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="InAppPaypal"
-        android:id="@+id/inapp_paypal"
-        android:onClick="inAppPaypal"/>
-    <Button 
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TopupPaypal"
-        android:id="@+id/topup_paypal"
-        android:onClick="topupPaypal"/>
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+        
+        <Button
+            android:id="@+id/get_access_token"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="getAccessToken"
+            android:text="GetTopUpAccessToken" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/non_user_access_token"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="getNonUserAccessToken"
+            android:text="GetInAppAccessToken" />
+        
+        <Button
+            android:id="@+id/log_in"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="getUserBoughtItem"
+            android:text="getUserBoughtItem" />
+
+        <Button
+            android:id="@+id/in_app_sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="inAppSMS"
+            android:text="InAppSMS" />
+
+        <Button
+            android:id="@+id/topup_sms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="topupSMS"
+            android:text="TopupSMS" />
+
+        <Button
+            android:id="@+id/inapp_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="inAppCard"
+            android:text="InAppCard" />
+
+        <Button
+            android:id="@+id/topup_card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="topupCard"
+            android:text="TopupCard" />
+
+        <Button
+            android:id="@+id/inapp_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="inAppBank"
+            android:text="InAppBank" />
+
+        <Button
+            android:id="@+id/topup_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="topupBank"
+            android:text="TopupBank" />
+
+        <Button
+            android:id="@+id/inapp_paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="inAppPaypal"
+            android:text="InAppPaypal" />
+
+        <Button
+            android:id="@+id/topup_paypal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="topupPaypal"
+            android:text="TopupPaypal" />
+        <Button
+            android:id="@+id/get_item_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="getItemList"
+            android:text="Get Item List" />
+        <Button
+            android:id="@+id/chekc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="checkItemBought"
+            android:text="checkItemBought" />
+        <Button
+            android:id="@+id/buyItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="buyItem"
+            android:text="buyItem" />
+    </LinearLayout>
+
+</ScrollView>

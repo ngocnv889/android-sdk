@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <string name="redirect_uri_not_valid">Your redirect URI is not in valid format</string>
+    <string name="buy_tym_bank">Buy TYM via bank</string>
+    <string name="buy_tym_sms">Buy TYM via SMS</string>
+    <string name="buy_tym_card">Buy TYM via cards</string>
+    <string name="buy_tym_paypal">Buy TYM via Paypal</string>
+    <string name="vnd_currency">VNĐ</string>
+    <string name="get_x_tym">Get %d</string>
+    <string name="green_tym">green TYM</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_ing">Logging in&#8230;</string>
+    <string name="timeout">Connection timeout. Please try again</string>
+    <string name="error">Error occurred, please try again</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+	<string name="validator_email">The e-mail address is not in a valid format.</string>
+    <string name="validator_empty">You must complete this field.</string>
+    <string name="validator_url">The URL entered is incorrect.</string>
+    <string name="validator_confirm">The confirm password does not match.</string>
+    <string name="validator_alnum">The value has not only alnum characters</string>
+    <string name="validator_hex">The value has not only hexadecimal digit characters</string>
+    <string name="validator_regexp">The value does not match against pattern.</string>
     <string name="app_name">AppotaSDK</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>

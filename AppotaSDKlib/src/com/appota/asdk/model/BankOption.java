@@ -7,6 +7,13 @@ public class BankOption {
 	private int tym;
 	private double amount;
 	private String currency;
+	
+	public BankOption(int tym, double amount){
+		this.tym = tym;
+		this.amount = amount;
+	}
+	
+	public BankOption(){}
 
 	public String getUrl() {
 		return url;

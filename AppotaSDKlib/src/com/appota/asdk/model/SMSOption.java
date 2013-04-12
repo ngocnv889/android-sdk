@@ -4,6 +4,13 @@ import java.io.Serializable;
 
 public class SMSOption implements Serializable{
 	
+	public String getTransactionId() {
+		return transactionId;
+	}
+	public void setTransactionId(String transactionId) {
+		this.transactionId = transactionId;
+	}
+
 	/**
 	 * 
 	 */
@@ -13,6 +20,7 @@ public class SMSOption implements Serializable{
 	private int tym;
 	private double amount;
 	private String currency;
+	private String transactionId;
 	
 	public String getSyntax() {
 		return syntax;

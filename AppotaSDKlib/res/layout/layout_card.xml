@@ -24,7 +24,6 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:layout_marginTop="4dp"
-        android:background="@drawable/spinner_bg"
         android:entries="@array/card_type" />
 
     <TextView

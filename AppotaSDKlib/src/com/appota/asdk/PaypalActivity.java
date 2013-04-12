@@ -152,7 +152,7 @@ public class PaypalActivity extends Activity implements OnClickListener {
 			// FEEPAYER_SECONDARYONLY.
 			pp.setFeesPayer(PayPal.FEEPAYER_EACHRECEIVER);
 			// Set to true if the transaction will require shipping.
-			pp.setShippingEnabled(true);
+			pp.setShippingEnabled(false);
 			// Dynamic Amount Calculation allows you to set tax and shipping
 			// amounts based on the user's shipping address. Shipping must be
 			// enabled for Dynamic Amount Calculation. This also requires you to
@@ -183,7 +183,7 @@ public class PaypalActivity extends Activity implements OnClickListener {
 		// Sets the tax amount.
 		invoice.setTax(new BigDecimal("0.00"));
 		// Sets the shipping amount.
-		invoice.setShipping(new BigDecimal(paypal.getForm().getNoShipping()));
+		invoice.setShipping(new BigDecimal(0));
 
 		// PayPalInvoiceItem has several parameters available to it. None of
 		// these parameters is required.

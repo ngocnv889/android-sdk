@@ -2,6 +2,14 @@ package com.appota.asdk.model;
 
 public class User {
 
+	public int getYellowTym() {
+		return yellowTym;
+	}
+
+	public void setYellowTym(int yellowTym) {
+		this.yellowTym = yellowTym;
+	}
+
 	private String picture;
 	private String userName;
 	private String name;
@@ -9,6 +17,7 @@ public class User {
 	private String gender;
 	private int greenTym;
 	private int purpleTym;
+	private int yellowTym;
 	private String email;
 	private String area;
 	private String city;
