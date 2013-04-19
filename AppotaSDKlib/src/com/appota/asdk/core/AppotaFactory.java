@@ -287,8 +287,7 @@ public class AppotaFactory {
 	
 	public void getUserInfo(String accessToken, final UserInfoHandler handler){
 		String endpoint = Constant.USER_INFO_ENDPOINT + accessToken;
-		Map<String, String> params = new HashMap<String, String>();
-		aq.ajax(endpoint, params, JSONObject.class, new AjaxCallback<JSONObject>() {
+		aq.ajax(endpoint, JSONObject.class, new AjaxCallback<JSONObject>() {
             @Override
             public void callback(String url, JSONObject json, AjaxStatus ajaxStatus) {
                 if(json != null){
@@ -302,9 +301,7 @@ public class AppotaFactory {
                 			user.setFullName(obj.getString("fullname"));
                 			user.setUserName(obj.getString("username"));
                 			user.setGender(obj.getString("gender"));
-                			user.setGreenTym(obj.getInt("blue_tym"));
-                			user.setPurpleTym(obj.getInt("purple_tym"));
-                			user.setYellowTym(obj.getInt("yellow_tym"));
+                			user.setGreenTym(obj.getInt("tym"));
                 			handler.onGetUserInfoSuccess(user);
                 		} else {
                 			handler.onGetUserInfoError(json.getInt("error_code"));

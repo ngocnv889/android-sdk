@@ -58,7 +58,7 @@ public class Constant {
 	
 	public static final String REQUEST_TOKEN_URL_KEY = "request_token_url";
 	
-	public static final String USER_INFO_ENDPOINT = "https://api.appota.com/user/detail?access_token=";
+	public static final String USER_INFO_ENDPOINT = "https://api.appota.com/user/info?access_token=";
 	public static final String NON_USER_REQUEST_TOKEN_ENDPOINT = "https://id.appota.com/app/request_token?";
 	public static final String NON_USER_ACCESS_TOKEN_ENDPOINT = "https://id.appota.com/app/access_token";
 	

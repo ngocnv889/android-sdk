@@ -13,8 +13,10 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Toast;
 
 import com.appota.asdk.core.AppMsg;
+import com.appota.asdk.core.AppotaFactory;
 import com.appota.asdk.core.AppotaSDK;
 import com.appota.asdk.core.SMSClickListener;
 import com.appota.asdk.exception.ErrorHandler;
@@ -25,12 +27,14 @@ import com.appota.asdk.handler.GetBoughtItemListHandler;
 import com.appota.asdk.handler.GetItemListHandler;
 import com.appota.asdk.handler.GetRequestTokenHandler;
 import com.appota.asdk.handler.TransactionStatusHandler;
+import com.appota.asdk.handler.UserInfoHandler;
 import com.appota.asdk.model.AppotaAccessToken;
 import com.appota.asdk.model.AppotaItem;
 import com.appota.asdk.model.BoughtItem;
 import com.appota.asdk.model.SMSOption;
 import com.appota.asdk.model.SMSPayment;
 import com.appota.asdk.model.TransactionResult;
+import com.appota.asdk.model.User;
 import com.appota.asdk.util.Constant;
 
 @SuppressLint("NewApi")
@@ -67,40 +71,54 @@ public class MainActivity extends Activity {
 
 	//get access token without user login 
 	public void getNonUserAccessToken(View btn){
-		List<String> scopes = new ArrayList<String>();
-		scopes.add(Constant.INAPP_SCOPE);
-//		scopes.add(Constant.USER_EMAIL_SCOPE);
-//		scopes.add(Constant.USER_INFO_SCOPE);
-//		scopes.add(Constant.USER_PAYMENT_SCOPE);
-//		scopes.add(Constant.USER_CHARGE_SCOPE);
-		appota.getInAppRequestToken(scopes, "en", new GetRequestTokenHandler() {
+		AppotaFactory.getInstance().init(this).getUserInfo("94e2ef551e27c3a2d460a14eec78f83e051710723", new UserInfoHandler() {
 			
 			@Override
-			public void onGetRequestTokenSuccess(String requestToken) {
+			public void onGetUserInfoSuccess(User user) {
 				// TODO Auto-generated method stub
-				appota.getInAppAccessToken(requestToken, "en", new GetAccessTokenHandler() {
-					
-					@Override
-					public void onGetAccessTokenSuccess(AppotaAccessToken accessToken) {
-						// TODO Auto-generated method stub
-						PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putString("at", accessToken.getAccessToken()).commit();
-						AppMsg.makeText(MainActivity.this, accessToken.getAccessToken(), AppMsg.STYLE_CONFIRM, null).show();
-					}
-					
-					@Override
-					public void onGetAccessTokenError(int errorCode) {
-						// TODO Auto-generated method stub
-						
-					}
-				});
+				Toast.makeText(MainActivity.this, user.getUserName(), Toast.LENGTH_SHORT).show();
 			}
 			
 			@Override
-			public void onGetRequestTokenError(int errorCode) {
+			public void onGetUserInfoError(int errorCode) {
 				// TODO Auto-generated method stub
 				
 			}
 		});
+//		List<String> scopes = new ArrayList<String>();
+//		scopes.add(Constant.INAPP_SCOPE);
+////		scopes.add(Constant.USER_EMAIL_SCOPE);
+////		scopes.add(Constant.USER_INFO_SCOPE);
+////		scopes.add(Constant.USER_PAYMENT_SCOPE);
+////		scopes.add(Constant.USER_CHARGE_SCOPE);
+//		appota.getInAppRequestToken(scopes, "en", new GetRequestTokenHandler() {
+//			
+//			@Override
+//			public void onGetRequestTokenSuccess(String requestToken) {
+//				// TODO Auto-generated method stub
+//				appota.getInAppAccessToken(requestToken, "en", new GetAccessTokenHandler() {
+//					
+//					@Override
+//					public void onGetAccessTokenSuccess(AppotaAccessToken accessToken) {
+//						// TODO Auto-generated method stub
+//						PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putString("at", accessToken.getAccessToken()).commit();
+//						AppMsg.makeText(MainActivity.this, accessToken.getAccessToken(), AppMsg.STYLE_CONFIRM, null).show();
+//					}
+//					
+//					@Override
+//					public void onGetAccessTokenError(int errorCode) {
+//						// TODO Auto-generated method stub
+//						
+//					}
+//				});
+//			}
+//			
+//			@Override
+//			public void onGetRequestTokenError(int errorCode) {
+//				// TODO Auto-generated method stub
+//				
+//			}
+//		});
 	}
 	
 	//in-app purchase using sms
@@ -198,6 +216,20 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void onGetItemListError(int errorCode) {
+				// TODO Auto-generated method stub
+				
+			}
+		});
+		AppotaFactory.getInstance().init(this).getUserInfo(accessToken, new UserInfoHandler() {
+			
+			@Override
+			public void onGetUserInfoSuccess(User user) {
+				// TODO Auto-generated method stub
+				
+			}
+			
+			@Override
+			public void onGetUserInfoError(int errorCode) {
 				// TODO Auto-generated method stub
 				
 			}
@@ -336,6 +368,7 @@ public class MainActivity extends Activity {
 			//check transaction status
 		} else if(requestCode == Constant.REQUEST_TOKEN_REQUEST_CODE && resultCode == RESULT_OK){
 			String requestToken = data.getStringExtra(Constant.REQUEST_TOKEN_KEY);
+			
 			AppMsg.makeText(MainActivity.this, requestToken, AppMsg.STYLE_CONFIRM, null).show();
 			appota.getTopupAccessToken(requestToken, "en", new GetAccessTokenHandler() {
 				
@@ -344,6 +377,7 @@ public class MainActivity extends Activity {
 					// TODO Auto-generated method stub
 					PreferenceManager.getDefaultSharedPreferences(MainActivity.this).edit().putString("at", accessToken.getAccessToken()).commit();
 					AppMsg.makeText(MainActivity.this, accessToken.getAccessToken(), AppMsg.STYLE_CONFIRM, null).show();
+					System.err.println(accessToken.getAccessToken()); 
 				}
 				
 				@Override
